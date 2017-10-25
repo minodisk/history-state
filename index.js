@@ -10,10 +10,10 @@ setInterval(() => {
   const title = 'history-state-' + length;
   const path = '/history-state/' + length;
   try {
-    history.history - state(state, title, path);
+    history.pushState(state, title, path);
   } catch (err) {
     console.log(err);
   }
-  log.innerText = 'history-state: ' + length + 'characters';
+  log.innerText = 'pushState: ' + length + 'characters';
   i++;
 }, 1000);
